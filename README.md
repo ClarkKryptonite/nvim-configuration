@@ -18,3 +18,16 @@ ensure that you use nerd-font in terminal
 `brew install --cask font-hack-nerd-font`
 2. iterm font
 switch to 'Hack Nerd Font Mono'
+
+### nvim-lspconfig
+after install nvim-lspconfig plugin, ensure use right node version.
+1. check current node version.
+`nvm version`
+`nvm default [version>14]`
+`nvm use [version>14]`
+2. install language server e.g. pyright
+`npm i -g pyright`
+3. load configuration
+see github -> [https://github.com/neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
+4. open a py file to check Lsp is installed successfully
+input `:LspInfo`
