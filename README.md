@@ -31,3 +31,6 @@ after install nvim-lspconfig plugin, ensure use right node version.
 see github -> [https://github.com/neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 4. open a py file to check Lsp is installed successfully
 input `:LspInfo`
+### barbar plugin
+If you use mac, <A-.> means <ESC-.>.
+And you shoud hold <ESC> key for a while.
