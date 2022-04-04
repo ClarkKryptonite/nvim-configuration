@@ -8,6 +8,10 @@ return require'packer'.startup(function()
     use 'romgrk/barbar.nvim'
     use { 'nvim-treesitter/nvim-treesitter', run = ':TSUpdate' }
     use 'nvim-treesitter/nvim-treesitter-refactor'
+    use {
+        'nvim-telescope/telescope.nvim',
+        requires = { {'nvim-lua/plenary.nvim'} }
+    }
 
     -- LSP plugins
     use 'neovim/nvim-lspconfig'

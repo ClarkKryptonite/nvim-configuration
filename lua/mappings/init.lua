@@ -24,7 +24,7 @@ map('n', '<A-8>', ':BufferGoto 8<CR>', opts)
 map('n', '<A-9>', ':BufferGoto 9<CR>', opts)
 map('n', ']B', ':BufferLast<CR>', opts)
 -- Close buffer
-map('n', '<A-c>', ':BufferClose<CR>', opts)
+map('n', '[w', ':BufferClose<CR>', opts)
 -- Wipeout buffer
 --                 :BufferWipeout<CR>
 -- Close commands
@@ -41,3 +41,8 @@ map('n', '<Space>bl', ':BufferOrderByLanguage<CR>', opts)
 -- Other:
 -- :BarbarEnable - enables barbar (enabled by default)
 -- :BarbarDisable - very bad command, should never be used
+
+-- Telescope mappings
+map('n', '<leader>ff', ':Telescope find_files<CR>', opts)
+map('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
+map('n', '<leader>fh', ':Telescope git_commits<CR>', opts)
