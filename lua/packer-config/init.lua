@@ -12,6 +12,7 @@ return require'packer'.startup(function()
         'nvim-telescope/telescope.nvim', -- Find, Filter, Preview, Pick. All lua, all the time.
         requires = { {'nvim-lua/plenary.nvim'} }
     }
+    use("windwp/nvim-autopairs")
 
     -- LSP plugins
     use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
