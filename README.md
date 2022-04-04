@@ -51,3 +51,13 @@ ensure fd(replace find command) & ripgrep(replace grep command) has installed.
 2. `brew install ripgrep`
 
 ### nvim-lsp-installer
+
+### null-ls
+To run built-in sources, the command specified below must be available on your $PATH and visible to Neovim. For example, to check if stylua is available, run the following (Vim, not Lua) command:
+```vimrc
+" should echo 1 if available (and 0 if not)
+:echo executable("stylua")
+```
+if not, you can use homebrew to install.
+e.g.
+`brew install stylua`

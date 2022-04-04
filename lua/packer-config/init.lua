@@ -12,11 +12,12 @@ return require'packer'.startup(function()
         'nvim-telescope/telescope.nvim', -- Find, Filter, Preview, Pick. All lua, all the time.
         requires = { {'nvim-lua/plenary.nvim'} }
     }
-    use("windwp/nvim-autopairs")
+    use 'windwp/nvim-autopairs'
 
     -- LSP plugins
     use 'neovim/nvim-lspconfig' -- Collection of configurations for built-in LSP client
     use 'williamboman/nvim-lsp-installer' -- Companion plugin for lsp-config, allows us to seamlesly install language servers
+    use 'jose-elias-alvarez/null-ls.nvim' --> inject lsp diagnistocs, formattings, code actions, and more ...
     use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
     use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
     use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
