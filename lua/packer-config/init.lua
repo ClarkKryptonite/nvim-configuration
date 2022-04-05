@@ -24,4 +24,8 @@ return require("packer").startup(function()
 	use("saadparwaiz1/cmp_luasnip") -- Snippets source for nvim-cmp
 	use("L3MON4D3/LuaSnip") -- Snippets plugin
 	use("onsails/lspkind-nvim") -- vscode-like pictograms for neovim lsp completion items
+
+	-- tpope's plugins that should be part of vim
+	use({ "tpope/vim-surround" })
+	use({ "tpope/vim-repeat" })
 end)
