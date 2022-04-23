@@ -31,4 +31,7 @@ return require("packer").startup(function()
 
 	-- markdown preview
 	use({ "ellisonleao/glow.nvim" })
+
+	-- git
+	use("lewis6991/gitsigns.nvim")
 end)
