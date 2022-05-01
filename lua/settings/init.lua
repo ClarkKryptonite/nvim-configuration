@@ -16,7 +16,7 @@ set.splitbelow = true
 set.splitright = true
 set.wrap = true
 set.scrolloff = 5
-set.fileencoding = 'utf-8'
+set.fileencoding = "utf-8"
 set.termguicolors = true
 
 set.number = true
@@ -24,3 +24,9 @@ set.relativenumber = true
 set.cursorline = true
 
 set.hidden = true
+
+-- fold --
+set.foldmethod = "expr"
+set.foldexpr = "nvim_treesitter#foldexpr()"
+set.foldenable = false
+set.foldlevel = 99
