@@ -8,12 +8,11 @@ return require("packer").startup(function()
 	use("romgrk/barbar.nvim") -- tabs for neovim
 	use({ "nvim-treesitter/nvim-treesitter", run = ":TSUpdate" })
 	use("nvim-treesitter/nvim-treesitter-refactor")
-	use({
-		"nvim-telescope/telescope.nvim", -- Find, Filter, Preview, Pick. All lua, all the time.
-		requires = { { "nvim-lua/plenary.nvim" } },
-	})
+	use("nvim-lua/plenary.nvim") -- require by telescope and neovim-session-manager
+	use("nvim-telescope/telescope.nvim") -- Find, Filter, Preview, Pick. All lua, all the time.
 	use("windwp/nvim-autopairs")
 	use("lewis6991/impatient.nvim") -- Speed up loading Lua modules in Neovim to improve startup time.
+	use("Shatur/neovim-session-manager") -- Manage sessions like folders in VSCode
 
 	-- LSP plugins
 	use("neovim/nvim-lspconfig") -- Collection of configurations for built-in LSP client
