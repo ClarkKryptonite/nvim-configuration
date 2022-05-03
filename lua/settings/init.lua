@@ -30,3 +30,11 @@ set.foldmethod = "expr"
 set.foldexpr = "nvim_treesitter#foldexpr()"
 set.foldenable = false
 set.foldlevel = 99
+-- fold function can't be used with telescope opened
+-- you should use the code following
+vim.cmd([[
+  augroup _fold_bug_solution  " https://github.com/nvim-telescope/telescope.nvim/issues/559
+    autocmd!
+    autocmd BufRead * autocmd BufWinEnter * ++once normal! zx
+  augroup end
+]])
