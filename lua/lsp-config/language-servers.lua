@@ -32,7 +32,6 @@ local servers = {
 	"bashls",
 	"pyright",
 	"vuels",
-	"spectral",
 	"emmet_ls",
 	"sumneko_lua",
 	"clangd",
