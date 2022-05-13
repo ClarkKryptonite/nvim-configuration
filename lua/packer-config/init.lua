@@ -27,6 +27,7 @@ return require("packer").startup(function()
 	-- tpope's plugins that should be part of vim
 	use({ "tpope/vim-surround" })
 	use({ "tpope/vim-repeat" })
+	use({ "tpope/vim-commentary" })
 
 	-- markdown preview
 	use({ "ellisonleao/glow.nvim" })
