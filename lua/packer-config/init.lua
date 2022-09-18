@@ -34,4 +34,10 @@ return require("packer").startup(function()
 
 	-- git
 	use("lewis6991/gitsigns.nvim")
+
+	-- nvim motions on speed
+	use({
+		"phaazon/hop.nvim",
+		branch = "v2", -- optional but strongly recommended
+	})
 end)

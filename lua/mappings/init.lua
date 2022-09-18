@@ -1,6 +1,7 @@
 local map = vim.api.nvim_set_keymap
 local opts = { noremap = true, silent = true }
 
+-- don't use <space> as leader key, because <space> is default as <Right> key.
 vim.g.mapleader = " " -- leader key
 
 map("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
@@ -34,9 +35,9 @@ map("n", "[w", ":BufferClose<CR>", opts)
 -- Magic buffer-picking mode
 map("n", "<C-p>", ":BufferPick<CR>", opts)
 -- Sort automatically by...
-map("n", "<Space>bb", ":BufferOrderByBufferNumber<CR>", opts)
-map("n", "<Space>bd", ":BufferOrderByDirectory<CR>", opts)
-map("n", "<Space>bl", ":BufferOrderByLanguage<CR>", opts)
+map("n", "<leader>bb", ":BufferOrderByBufferNumber<CR>", opts)
+map("n", "<leader>bd", ":BufferOrderByDirectory<CR>", opts)
+map("n", "<leader>bl", ":BufferOrderByLanguage<CR>", opts)
 
 -- Other:
 -- :BarbarEnable - enables barbar (enabled by default)
