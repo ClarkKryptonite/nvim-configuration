@@ -29,8 +29,13 @@ return require("packer").startup(function()
 	use({ "tpope/vim-repeat" })
 	use({ "tpope/vim-commentary" })
 
-	-- markdown preview
-	use({ "ellisonleao/glow.nvim" })
+	-- markdown
+	use({
+		"iamcco/markdown-preview.nvim",
+		run = function()
+			vim.fn["mkdp#util#install"]()
+		end,
+	})
 
 	-- git
 	use("lewis6991/gitsigns.nvim")

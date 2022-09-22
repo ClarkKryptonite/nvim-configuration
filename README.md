@@ -62,6 +62,4 @@ if not, you can use homebrew to install.
 e.g.
 `brew install stylua`
 
-### glow plugin for markdown preview
-ensure glow has been installed
-`brew install glow`
+### markdown preview
