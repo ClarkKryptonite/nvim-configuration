@@ -6,26 +6,33 @@ vim.g.mapleader = " " -- leader key
 
 map("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
+map("i", ",ws", "<cmd>w<CR>", opts)
+map("i", ",wa", "<cmd>wa<CR>", opts)
+map("n", "<leader>ws", ":w<CR>", opts)
+map("n", "<leader>wa", ":wa<CR>", opts)
+map("n", "<leader>s", ":luafile %<CR>", opts)
+
 --- barbar mappings
 -- Move to previous/next
 map("n", "[b", ":BufferPrevious<CR>", opts)
 map("n", "]b", ":BufferNext<CR>", opts)
 -- Re-order to previous/next
-map("n", "[[b", ":BufferMovePrevious<CR>", opts)
-map("n", "]]b", " :BufferMoveNext<CR>", opts)
+map("n", "<<", ":BufferMovePrevious<CR>", opts)
+map("n", ">>", " :BufferMoveNext<CR>", opts)
 -- Goto buffer in position...
 map("n", "[B", ":BufferGoto 1<CR>", opts)
-map("n", "<A-2>", ":BufferGoto 2<CR>", opts)
-map("n", "<A-3>", ":BufferGoto 3<CR>", opts)
-map("n", "<A-4>", ":BufferGoto 4<CR>", opts)
-map("n", "<A-5>", ":BufferGoto 5<CR>", opts)
-map("n", "<A-6>", ":BufferGoto 6<CR>", opts)
-map("n", "<A-7>", ":BufferGoto 7<CR>", opts)
-map("n", "<A-8>", ":BufferGoto 8<CR>", opts)
-map("n", "<A-9>", ":BufferGoto 9<CR>", opts)
 map("n", "]B", ":BufferLast<CR>", opts)
+map("n", "<leader>b2", ":BufferGoto 2<CR>", opts)
+map("n", "<leader>b3", ":BufferGoto 3<CR>", opts)
+map("n", "<leader>b4", ":BufferGoto 4<CR>", opts)
+map("n", "<leader>b5", ":BufferGoto 5<CR>", opts)
+map("n", "<leader>b6", ":BufferGoto 6<CR>", opts)
+map("n", "<leader>b7", ":BufferGoto 7<CR>", opts)
+map("n", "<leader>b8", ":BufferGoto 8<CR>", opts)
+map("n", "<leader>b9", ":BufferGoto 9<CR>", opts)
 -- Close buffer
 map("n", "[w", ":BufferClose<CR>", opts)
+map("n", "<leader>bc", ":BufferClose!<CR>", opts)
 -- Wipeout buffer
 --                 :BufferWipeout<CR>
 -- Close commands
@@ -33,7 +40,7 @@ map("n", "[w", ":BufferClose<CR>", opts)
 --                 :BufferCloseBuffersLeft<CR>
 --                 :BufferCloseBuffersRight<CR>
 -- Magic buffer-picking mode
-map("n", "<C-p>", ":BufferPick<CR>", opts)
+map("n", "<leader>bp", ":BufferPick<CR>", opts)
 -- Sort automatically by...
 map("n", "<leader>bb", ":BufferOrderByBufferNumber<CR>", opts)
 map("n", "<leader>bd", ":BufferOrderByDirectory<CR>", opts)
