@@ -36,6 +36,7 @@ return require("packer").startup(function()
 			vim.fn["mkdp#util#install"]()
 		end,
 	})
+	use({ "dhruvasagar/vim-table-mode" })
 
 	-- git
 	use("lewis6991/gitsigns.nvim")

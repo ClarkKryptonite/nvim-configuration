@@ -9,6 +9,9 @@ cmd("FileType", {
 	pattern = "markdown",
 	group = vim.api.nvim_create_augroup("MarkdownSnippet", { clear = true }),
 	callback = function()
+		-- enbale table snippet
+		vim.api.nvim_exec("TableModeEnable", true)
+		-- keymap
 		map("i", ",t", "<cmd>MarkdownPreviewToggle<CR>", opts)
 		map("i", ",f", "<Esc>/<++><CR>:nohlsearch<CR>c4l", opts)
 		map("i", ",n", "---<Enter><Enter>", opts)
