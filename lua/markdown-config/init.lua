@@ -11,10 +11,14 @@ cmd("FileType", {
 	callback = function()
 		-- enbale table snippet
 		vim.api.nvim_exec("TableModeEnable", true)
+		-- normal mode keymap
+		map("n", "<leader>tc", "<cmd>GenTocMarked<CR>", opts)
 		-- insert mode keymap
+		-- function
 		map("i", ",t", "<cmd>MarkdownPreviewToggle<CR>", opts)
 		map("i", ",o", "<cmd>MarkdownPreview<CR>", opts)
 		map("i", ",O", "<cmd>MarkdownPreviewStop<CR>", opts)
+		-- snippet
 		map("i", ",f", "<Esc>/<++><CR>:nohlsearch<CR>c4l", opts)
 		map("i", ",n", "---<Enter><Enter>", opts)
 		map("i", ",b", "**** <++><ESC>6hi", opts)

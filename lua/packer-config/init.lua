@@ -37,6 +37,7 @@ return require("packer").startup(function()
 		end,
 	})
 	use({ "dhruvasagar/vim-table-mode" })
+	use({ "mzlogin/vim-markdown-toc" })
 
 	-- git
 	use("lewis6991/gitsigns.nvim")
