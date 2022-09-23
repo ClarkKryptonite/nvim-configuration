@@ -38,6 +38,7 @@ return require("packer").startup(function()
 	})
 	use({ "dhruvasagar/vim-table-mode" })
 	use({ "mzlogin/vim-markdown-toc" })
+	use({ "ferrine/md-img-paste.vim" })
 
 	-- git
 	use("lewis6991/gitsigns.nvim")
