@@ -6,11 +6,16 @@ vim.g.mapleader = " " -- leader key
 
 map("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
 
+--- basic keymap
+-- save
 map("i", ",ws", "<cmd>w<CR>", opts)
 map("i", ",wa", "<cmd>wa<CR>", opts)
 map("n", "<leader>ws", ":w<CR>", opts)
 map("n", "<leader>wa", ":wa<CR>", opts)
-map("n", "<leader>s", ":luafile %<CR>", opts)
+-- execute lua all script files
+map("n", "<leader>ss", ":luafile %<CR>", opts)
+map("n", "<leader>sw", "<cmd>w<CR><cmd>luafile %<CR>", opts)
+map("n", "<leader>sa", "<cmd>wa<CR><cmd>luafile %<CR>", opts)
 
 --- barbar mappings
 -- Move to previous/next
