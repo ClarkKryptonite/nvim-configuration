@@ -1,5 +1,5 @@
-require'nvim-tree'.setup {
-    diagnostics = {
-        enable = true,
-    },
-}
+require("nvim-tree").setup({
+	diagnostics = {
+		enable = true,
+	},
+})
