@@ -22,8 +22,8 @@ map("n", "<leader>sa", "<cmd>wa<CR><cmd>luafile %<CR>", opts)
 map("n", "[b", ":BufferPrevious<CR>", opts)
 map("n", "]b", ":BufferNext<CR>", opts)
 -- Re-order to previous/next
-map("n", "<<", ":BufferMovePrevious<CR>", opts)
-map("n", ">>", " :BufferMoveNext<CR>", opts)
+map("n", "<leader><<", ":BufferMovePrevious<CR>", opts)
+map("n", "<leader>>>", ":BufferMoveNext<CR>", opts)
 -- Goto buffer in position...
 map("n", "[B", ":BufferGoto 1<CR>", opts)
 map("n", "]B", ":BufferLast<CR>", opts)
