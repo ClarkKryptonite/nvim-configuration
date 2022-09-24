@@ -4,6 +4,9 @@ local opts = { noremap = true, silent = true }
 local cmd = vim.api.nvim_create_autocmd
 
 map("n", "<leader>mt", "<cmd>MarkdownPreviewToggle<CR>", opts)
+vim.g.mkdp_auto_close = 0
+vim.g.mkdp_open_to_the_world = 0
+vim.g.mkdp_theme = "light"
 
 cmd("FileType", {
 	pattern = "markdown",
@@ -17,7 +20,7 @@ cmd("FileType", {
 		-- function
 		map("i", ",o", "<cmd>MarkdownPreview<CR>", opts)
 		map("i", ",O", "<cmd>MarkdownPreviewStop<CR>", opts)
-		map("i", ",P", "<cmd>call mdip#MarkdownClipboardImage()<CR>", opts)
+		map("i", ",P", "<cmd>call mdip#MarkdownClipboardImage()<CR><Esc><Esc>A", opts)
 		-- snippet
 		map("i", ",f", "<Esc>/<++><CR>:nohlsearch<CR>c4l", opts)
 		map("i", ",n", "---<Enter><Enter>", opts)
