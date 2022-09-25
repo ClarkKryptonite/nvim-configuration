@@ -16,8 +16,10 @@ return require("packer").startup(function()
 
     -- LSP plugins
     use("neovim/nvim-lspconfig") -- Collection of configurations for built-in LSP client
-    use("williamboman/nvim-lsp-installer") -- Companion plugin for lsp-config, allows us to seamlesly install language servers
-    use("jose-elias-alvarez/null-ls.nvim") --> inject lsp diagnistocs, formattings, code actions, and more ...
+    use({ "williamboman/mason.nvim" }) -- Companion plugin for lsp-config, allows us to seamlesly install language servers
+    -- use("jose-elias-alvarez/null-ls.nvim") --> inject lsp diagnistocs, formattings, code actions, and more ...
+    -- use("jayp0521/mason-null-ls.nvim") --> mason-null-ls bridges mason.nvim with the null-ls plugin - making it easier to use both plugins together.
+    use("williamboman/mason-lspconfig.nvim") --> mason-lspconfig bridges mason.nvim with the lspconfig plugin - making it easier to use both plugins together.
     use("hrsh7th/nvim-cmp") -- Autocompletion plugin
     use("hrsh7th/cmp-nvim-lsp") -- LSP source for nvim-cmp
     use("saadparwaiz1/cmp_luasnip") -- Snippets source for nvim-cmp
