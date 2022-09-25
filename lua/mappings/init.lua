@@ -44,7 +44,7 @@ map("n", "<leader>bc", ":BufferClose!<CR>", opts)
 -- Wipeout buffer
 --                 :BufferWipeout<CR>
 -- Close commands
---                 :BufferCloseAllButCurrent<CR>
+map("n", "<leader>co", ":BufferCloseAllButCurrent<CR>", opts)
 --                 :BufferCloseBuffersLeft<CR>
 --                 :BufferCloseBuffersRight<CR>
 -- Magic buffer-picking mode
