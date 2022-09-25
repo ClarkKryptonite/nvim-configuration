@@ -33,7 +33,6 @@ local servers = {
 	"pyright",
 	"vuels",
 	"emmet_ls",
-	"sumneko_lua",
 	"clangd",
 	"jsonls",
 }
