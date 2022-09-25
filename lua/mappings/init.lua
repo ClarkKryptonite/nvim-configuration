@@ -4,8 +4,6 @@ local opts = { noremap = true, silent = true }
 -- don't use <space> as leader key, because <space> is default as <Right> key.
 vim.g.mapleader = " " -- leader key
 
-map("n", "<leader>e", ":NvimTreeToggle<CR>", opts)
-
 --- basic keymap
 -- save
 map("i", ",ws", "<cmd>w<CR>", opts)
@@ -16,6 +14,11 @@ map("n", "<leader>wa", ":wa<CR>", opts)
 map("n", "<leader>ss", ":luafile %<CR>", opts)
 map("n", "<leader>sw", "<cmd>w<CR><cmd>luafile %<CR>", opts)
 map("n", "<leader>sa", "<cmd>wa<CR><cmd>luafile %<CR>", opts)
+
+-- nvim-tree mappings
+map("n", "<leader>ap", ":NvimTreeFocus<CR>", opts)
+map("n", "<leader>ht", ":NvimTreeClose<CR>", opts)
+map("n", "<leader>af", ":NvimTreeFindFile<CR>", opts)
 
 --- barbar mappings
 -- Move to previous/next
