@@ -1,5 +1,13 @@
 require("mason-lspconfig").setup({
-    ensure_installed = { "sumneko_lua" },
+    ensure_installed = {
+        "sumneko_lua",
+        "bashls",
+        "emmet_ls",
+        "pyright",
+        "clangd",
+        "kotlin_language_server",
+        "jdtls",
+    },
 })
 
 -- Mappings.
