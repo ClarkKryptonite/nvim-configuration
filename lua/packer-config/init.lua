@@ -44,6 +44,7 @@ return require("packer").startup(function()
 
     -- git
     use("lewis6991/gitsigns.nvim")
+    use("sindrets/diffview.nvim")
 
     -- nvim motions on speed
     use({
