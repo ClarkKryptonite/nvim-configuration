@@ -7,6 +7,7 @@ require("mason-lspconfig").setup({
         "clangd",
         "kotlin_language_server",
         "jdtls",
+        "jsonls"
     },
 })
 
@@ -45,7 +46,9 @@ local common_on_attach = function(client, bufnr)
     vim.keymap.set("n", "<leader>re", vim.lsp.buf.rename, bufopts)
     vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, bufopts)
     vim.keymap.set("n", "gr", vim.lsp.buf.references, bufopts)
-    vim.keymap.set("n", "<leader>rc", vim.lsp.buf.formatting, bufopts)
+    vim.keymap.set("n", "<leader>rc", function()
+        vim.lsp.buf.format { async = true }
+    end, bufopts)
 end
 
 require("mason-lspconfig").setup_handlers({
