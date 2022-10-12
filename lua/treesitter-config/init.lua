@@ -10,6 +10,7 @@ require("nvim-treesitter.configs").setup({
         "typescript",
         "json",
         "yaml",
+        "http"
     },
 
     -- Install languages synchronously (only applied to `ensure_installed`)
