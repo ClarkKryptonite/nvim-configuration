@@ -21,11 +21,17 @@ return require("packer").startup(function()
     -- use("jose-elias-alvarez/null-ls.nvim") --> inject lsp diagnistocs, formattings, code actions, and more ...
     -- use("jayp0521/mason-null-ls.nvim") --> mason-null-ls bridges mason.nvim with the null-ls plugin - making it easier to use both plugins together.
     use("williamboman/mason-lspconfig.nvim") --> mason-lspconfig bridges mason.nvim with the lspconfig plugin - making it easier to use both plugins together.
-    use("hrsh7th/nvim-cmp") -- Autocompletion plugin
+    -- autocompletion
+    use("hrsh7th/nvim-cmp")
+    use("hrsh7th/cmp-buffer")
+    use("hrsh7th/cmp-path")
     use("hrsh7th/cmp-nvim-lsp") -- LSP source for nvim-cmp
+
+    -- snippet
     use("saadparwaiz1/cmp_luasnip") -- Snippets source for nvim-cmp
     use("L3MON4D3/LuaSnip") -- Snippets plugin
     use("onsails/lspkind-nvim") -- vscode-like pictograms for neovim lsp completion items
+    use("rafamadriz/friendly-snippets")
 
     -- tpope's plugins that should be part of vim
     use({ "tpope/vim-surround" })
