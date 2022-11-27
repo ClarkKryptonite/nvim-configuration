@@ -14,6 +14,11 @@ map("n", "<leader>wa", ":wa<CR>", opts)
 map("n", "<leader>ss", ":luafile %<CR>", opts)
 map("n", "<leader>sw", "<cmd>w<CR><cmd>luafile %<CR>", opts)
 map("n", "<leader>sa", "<cmd>wa<CR><cmd>luafile %<CR>", opts)
+-- split window
+map("n", "<leader>sv", "<C-w>v", opts) -- split window vertically
+map("n", "<leader>sh", "<C-w>s", opts) -- split window horizontally
+map("n", "<leader>se", "<C-w>=", opts) -- make split windows equal width
+map("n", "<leader>sx", "<C-w>q", opts) -- close current split window
 
 -- nvim-tree mappings
 map("n", "<leader>ap", ":NvimTreeFocus<CR>", opts)
@@ -21,6 +26,8 @@ map("n", "<leader>ht", ":NvimTreeClose<CR>", opts)
 map("n", "<leader>af", ":NvimTreeFindFile<CR>", opts)
 
 --- barbar mappings
+-- new tab
+map("n", "<leader>nn", ":tabnew<CR>", opts)
 -- Move to previous/next
 map("n", "[b", ":BufferPrevious<CR>", opts)
 map("n", "]b", ":BufferNext<CR>", opts)
