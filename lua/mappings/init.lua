@@ -19,6 +19,8 @@ map("n", "<leader>sv", "<C-w>v", opts) -- split window vertically
 map("n", "<leader>sh", "<C-w>s", opts) -- split window horizontally
 map("n", "<leader>se", "<C-w>=", opts) -- make split windows equal width
 map("n", "<leader>sx", "<C-w>q", opts) -- close current split window
+-- no hightlightsearch
+map("n", "<leader>hh", ":noh<CR>", opts)
 
 -- nvim-tree mappings
 map("n", "<leader>ap", ":NvimTreeFocus<CR>", opts)
