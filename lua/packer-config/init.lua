@@ -13,6 +13,8 @@ return require("packer").startup(function()
 	use("windwp/nvim-autopairs")
 	use("lewis6991/impatient.nvim") -- Speed up loading Lua modules in Neovim to improve startup time.
 	use("Shatur/neovim-session-manager") -- Manage sessions like folders in VSCode
+
+	-- rest client, like postman, paw
 	use("NTBBloodbath/rest.nvim") -- rest client
 
 	-- configuring lsp servers
