@@ -10,6 +10,7 @@ null_ls.setup({
 		formatting.stylua,
 		formatting.prettier,
 		formatting.autopep8,
+		formatting.shfmt,
 		diagnostics.eslint_d,
 	},
 	-- configure format on save

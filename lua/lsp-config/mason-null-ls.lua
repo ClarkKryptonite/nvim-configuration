@@ -1,7 +1,8 @@
-require("mason-null-ls").setup {
-    ensure_installed = {
-        "prettier",
-        "stylua",
-        "eslint_d"
-    }
-}
+require("mason-null-ls").setup({
+	ensure_installed = {
+		"prettier",
+		"stylua",
+		"eslint_d",
+		"shfmt",
+	},
+})
