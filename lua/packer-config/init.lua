@@ -1,3 +1,9 @@
+vim.cmd([[
+  augroup packer_user_config
+    autocmd!
+    autocmd BufWritePost init.lua source <afile> | PackerSync
+  augroup end
+]])
 return require("packer").startup(function()
 	use("wbthomason/packer.nvim")
 	use("kyazdani42/nvim-web-devicons") -- enable icons
