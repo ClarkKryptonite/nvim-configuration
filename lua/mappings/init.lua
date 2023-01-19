@@ -10,6 +10,10 @@ map("i", ";ws", "<cmd>w<CR>", opts)
 map("i", ";wa", "<cmd>wa<CR>", opts)
 map("n", "<leader>ws", ":w<CR>", opts)
 map("n", "<leader>wa", ":wa<CR>", opts)
+-- visual mode
+-- move line
+map("v", "J", ":m '>+1<CR>gv=gv", opts)
+map("v", "K", ":m '<-2<CR>gv=gv", opts)
 -- execute lua all script files
 map("n", "<leader>ss", ":luafile %<CR>", opts)
 map("n", "<leader>sw", "<cmd>w<CR><cmd>luafile %<CR>", opts)
