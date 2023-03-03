@@ -8,4 +8,10 @@ require("nvim-tree").setup({
 	diagnostics = {
 		enable = true,
 	},
+	view = {
+		width = {},
+	},
+	renderer = {
+		group_empty = true,
+	},
 })
