@@ -101,7 +101,7 @@ There's two details you should notice.
 ```lua
 require("mason-lspconfig").setup({
     ensure_installed = {
-        "sumneko_lua",
+        "lua_ls",
         "bashls",
         "emmet_ls",
         "pyright",
