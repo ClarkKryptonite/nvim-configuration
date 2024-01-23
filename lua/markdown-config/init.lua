@@ -23,7 +23,7 @@ cmd("FileType", {
 		-- function
 		map("i", ";o", "<cmd>MarkdownPreview<CR>", opts)
 		map("i", ";O", "<cmd>MarkdownPreviewStop<CR>", opts)
-		map("i", ";P", "<cmd>call mdip#MarkdownClipboardImage()<CR><Esc><Esc>A", opts)
+		map("i", ";p", "<cmd>call mdip#MarkdownClipboardImage()<CR><Esc><Esc>A", opts)
 		-- snippet
 		map("i", ";f", "<Esc>/<++><CR>:nohlsearch<CR>c4l", opts)
 		map("i", ";n", "---<Enter><Enter>", opts)
@@ -33,7 +33,7 @@ cmd("FileType", {
 		map("i", ";c", "``<++><ESC>4hi", opts)
 		map("i", ";C", "```<Enter><++><Enter>```<Enter><Enter><++><Esc>4kA", opts)
 		map("i", ";h", "====<Space><++><ESC>6hi", opts)
-		map("i", ";p", "![](<++>)  <++><Esc>12hi", opts)
+		map("i", ";r", "![](<++>)  <++><Esc>12hi", opts)
 		map("i", ";a", "[](<++>)<++><Esc>10hi", opts)
 		map("i", ";1", "#<Space><Enter><++><Esc>kA", opts)
 		map("i", ";2", "##<Space><Enter><++><Esc>kA", opts)
