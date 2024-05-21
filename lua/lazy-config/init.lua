@@ -12,7 +12,6 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 return require("lazy").setup({
-	"wbthomason/packer.nvim",
 	"kyazdani42/nvim-web-devicons", -- enable icons
 	"EdenEast/nightfox.nvim",
 	"kyazdani42/nvim-tree.lua", -- file explorer
