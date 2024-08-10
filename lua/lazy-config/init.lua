@@ -12,12 +12,20 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 return require("lazy").setup({
-	"kyazdani42/nvim-web-devicons", -- enable icons
 	"EdenEast/nightfox.nvim",
 	"kyazdani42/nvim-tree.lua", -- file explorer
 	"rcarriga/nvim-notify",
 	"nvim-lualine/lualine.nvim", -- a statusline sritten in lua
-	"romgrk/barbar.nvim", -- tabs for neovim
+	{
+		"romgrk/barbar.nvim",
+		dependencies = {
+			"lewis6991/gitsigns.nvim", -- OPTIONAL: for git status
+			"nvim-tree/nvim-web-devicons", -- OPTIONAL: for file icons
+		},
+		init = function()
+			vim.g.barbar_auto_setup = false
+		end,
+	}, -- tabs for neovim
 	{ "nvim-treesitter/nvim-treesitter", cmd = "TSUpdate" },
 	"nvim-treesitter/nvim-treesitter-refactor",
 	"nvim-lua/plenary.nvim", -- require by telescope, neovim-session-manager, rest
