@@ -43,10 +43,11 @@ return require("lazy").setup({
 			rocks = { "lua-curl", "nvim-nio", "mimetypes", "xml2lua" },
 		},
 	},
+	"j-hui/fidget.nvim",
 	{
 		"rest-nvim/rest.nvim",
 		ft = "http",
-		dependencies = { "luarocks.nvim" },
+		dependencies = { "luarocks.nvim", "fidget.nvim" },
 		config = function()
 			require("rest-nvim").setup()
 		end,
