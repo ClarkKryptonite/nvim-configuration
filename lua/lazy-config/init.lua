@@ -15,7 +15,10 @@ return require("lazy").setup({
 	"EdenEast/nightfox.nvim",
 	"kyazdani42/nvim-tree.lua", -- file explorer
 	"rcarriga/nvim-notify",
-	"nvim-lualine/lualine.nvim", -- a statusline sritten in lua
+	{
+		"nvim-lualine/lualine.nvim",
+		dependencies = { "nvim-tree/nvim-web-devicons" },
+	}, -- a statusline sritten in lua
 	{
 		"romgrk/barbar.nvim",
 		dependencies = {
