@@ -32,6 +32,7 @@ require("gitsigns").setup({
 		delay = 1000,
 		ignore_whitespace = false,
 		virt_text_priority = 100,
+		use_focus = true,
 	},
 	current_line_blame_formatter = "<author>, <author_time:%R> - <summary>",
 	sign_priority = 6,
@@ -47,7 +48,7 @@ require("gitsigns").setup({
 		col = 1,
 	},
 	on_attach = function(bufnr)
-		local gitsigns = require("gitsigns")
+		local gs = require("gitsigns")
 
 		local function map(mode, l, r, opts)
 			opts = opts or {}
@@ -56,39 +57,43 @@ require("gitsigns").setup({
 		end
 
 		-- Navigation
-		-- Navigation
+		-- ]c & [c are nvim default diff keys
 		map("n", "]c", function()
 			if vim.wo.diff then
-				vim.cmd.normal({ "]c", bang = true })
-			else
-				gitsigns.nav_hunk("next")
+				return "]c"
 			end
-		end)
+			vim.schedule(function()
+				gs.next_hunk()
+			end)
+			return "<Ignore>"
+		end, { expr = true })
 
 		map("n", "[c", function()
 			if vim.wo.diff then
-				vim.cmd.normal({ "[c", bang = true })
-			else
-				gitsigns.nav_hunk("prev")
+				return "[c"
 			end
-		end)
+			vim.schedule(function()
+				gs.prev_hunk()
+			end)
+			return "<Ignore>"
+		end, { expr = true })
 
 		-- Actions
 		map({ "n", "v" }, "<leader>gs", ":Gitsigns stage_hunk<CR>")
 		map({ "n", "v" }, "<leader>gr", ":Gitsigns reset_hunk<CR>")
-		map("n", "<leader>gS", gitsigns.stage_buffer)
-		map("n", "<leader>gu", gitsigns.undo_stage_hunk)
-		map("n", "<leader>gR", gitsigns.reset_buffer)
-		map("n", "<leader>gl", gitsigns.preview_hunk)
+		map("n", "<leader>gS", gs.stage_buffer)
+		map("n", "<leader>gu", gs.undo_stage_hunk)
+		map("n", "<leader>gR", gs.reset_buffer)
+		map("n", "<leader>gl", gs.preview_hunk)
 		-- map("n", "<leader>gb", function()
 		-- 	gs.blame_line({ full = true })
 		-- end)
 		-- map("n", "<leader>gB", gs.toggle_current_line_blame)
-		map("n", "<leader>gd", gitsigns.diffthis)
+		map("n", "<leader>gd", gs.diffthis)
 		map("n", "<leader>gD", function()
-			gitsigns.diffthis("~")
+			gs.diffthis("~")
 		end)
-		map("n", "<leader>td", gitsigns.toggle_deleted)
+		map("n", "<leader>td", gs.toggle_deleted)
 
 		-- Text object
 		map({ "o", "x" }, "ih", ":<C-U>Gitsigns select_hunk<CR>")
