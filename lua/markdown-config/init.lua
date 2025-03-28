@@ -19,6 +19,7 @@ cmd("FileType", {
 		vim.api.nvim_exec("TableModeEnable", true)
 		-- normal mode keymap
 		map("n", "<leader>tc", "<cmd>GenTocMarked<CR>", opts)
+		map("i", ";t", "<cmd>GenTocMarked<CR>", opts)
 		-- insert mode keymap
 		-- function
 		map("i", ";o", "<cmd>MarkdownPreview<CR>", opts)
