@@ -43,6 +43,7 @@ return require("lazy").setup({
                 opts.ensure_installed = opts.ensure_installed or {}
                 table.insert(opts.ensure_installed, "http")
             end,
+            "j-hui/fidget.nvim",
         },
     }, -- rest client
 
