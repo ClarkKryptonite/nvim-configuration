@@ -12,11 +12,14 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 return require("lazy").setup({
-    "kyazdani42/nvim-web-devicons", -- enable icons
     "EdenEast/nightfox.nvim",
     "kyazdani42/nvim-tree.lua",     -- file explorer
     "rcarriga/nvim-notify",
-    "nvim-lualine/lualine.nvim",    -- a statusline sritten in lua
+    -- a statusline sritten in lua 
+    {
+        'nvim-lualine/lualine.nvim',
+        dependencies = { 'nvim-tree/nvim-web-devicons' }
+    },
     "romgrk/barbar.nvim",           -- tabs for neovim
     { "nvim-treesitter/nvim-treesitter", cmd = "TSUpdate" },
     "nvim-treesitter/nvim-treesitter-refactor",
@@ -61,49 +64,49 @@ return require("lazy").setup({
 
     -- formatting & linting
     -- {
-    --     "jay-babu/mason-null-ls.nvim",
-    --     event = { "BufReadPre", "BufNewFile" },
-    --     dependencies = {
-    --         "williamboman/mason.nvim",
-    --         "nvimtools/none-ls.nvim",
-    --     },
-    -- },
+        --     "jay-babu/mason-null-ls.nvim",
+        --     event = { "BufReadPre", "BufNewFile" },
+        --     dependencies = {
+            --         "williamboman/mason.nvim",
+            --         "nvimtools/none-ls.nvim",
+            --     },
+            -- },
 
-    -- autocompletion
-    "hrsh7th/nvim-cmp",
-    "hrsh7th/cmp-buffer",
-    "hrsh7th/cmp-path",
-    "hrsh7th/cmp-nvim-lsp", -- LSP source for nvim-cmp
+            -- autocompletion
+            "hrsh7th/nvim-cmp",
+            "hrsh7th/cmp-buffer",
+            "hrsh7th/cmp-path",
+            "hrsh7th/cmp-nvim-lsp", -- LSP source for nvim-cmp
 
-    -- snippet
-    "saadparwaiz1/cmp_luasnip", -- Snippets source for nvim-cmp
-    "L3MON4D3/LuaSnip",         -- Snippets plugin
-    "onsails/lspkind-nvim",     -- vscode-like pictograms for neovim lsp completion items
-    "rafamadriz/friendly-snippets",
+            -- snippet
+            "saadparwaiz1/cmp_luasnip", -- Snippets source for nvim-cmp
+            "L3MON4D3/LuaSnip",         -- Snippets plugin
+            "onsails/lspkind-nvim",     -- vscode-like pictograms for neovim lsp completion items
+            "rafamadriz/friendly-snippets",
 
-    -- tpope's plugins that should be part of vim
-    "tpope/vim-surround",
-    "tpope/vim-repeat",
-    "tpope/vim-commentary",
+            -- tpope's plugins that should be part of vim
+            "tpope/vim-surround",
+            "tpope/vim-repeat",
+            "tpope/vim-commentary",
 
-    -- markdown
-    {
-        "iamcco/markdown-preview.nvim",
-        build = function()
-            vim.fn["mkdp#util#install"]()
-        end,
-    },
-    "dhruvasagar/vim-table-mode",
-    "mzlogin/vim-markdown-toc",
-    "ferrine/md-img-paste.vim",
+            -- markdown
+            {
+                "iamcco/markdown-preview.nvim",
+                build = function()
+                    vim.fn["mkdp#util#install"]()
+                end,
+            },
+            "dhruvasagar/vim-table-mode",
+            "mzlogin/vim-markdown-toc",
+            "ferrine/md-img-paste.vim",
 
-    -- git
-    "lewis6991/gitsigns.nvim",
-    "sindrets/diffview.nvim",
+            -- git
+            "lewis6991/gitsigns.nvim",
+            "sindrets/diffview.nvim",
 
-    -- nvim motions on speed
-    {
-        "phaazon/hop.nvim",
-        branch = "v2", -- optional but strongly recommended
-    },
-})
+            -- nvim motions on speed
+            {
+                "phaazon/hop.nvim",
+                branch = "v2", -- optional but strongly recommended
+            },
+        })
