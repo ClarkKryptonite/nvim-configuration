@@ -18,3 +18,5 @@ require("git-config.diffview")
 require("session-manager-config")
 require("hop-config")
 require("rest-config")
+-- 自己写的脚本
+require("users.autosave")
