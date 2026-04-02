@@ -40,6 +40,6 @@ cmd("FileType", {
 		map("i", ";2", "##<Space><Enter><++><Esc>kA", opts)
 		map("i", ";3", "###<Space><Enter><++><Esc>kA", opts)
 		map("i", ";4", "####<Space><Enter><++><Esc>kA", opts)
-		map("i", ";l", "--------<Enter>", opts)
+		map("i", ";l", "--------<Enter><Enter>", opts)
 	end,
 })
