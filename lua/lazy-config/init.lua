@@ -62,12 +62,15 @@ return require("lazy").setup({
 		},
 	}, -- rest client
 
-	-- configuring lsp servers
-	"neovim/nvim-lspconfig", -- Collection of configurations for built-in LSP client
-
 	-- managing & installing lsp servers, linter & formatters
-	"williamboman/mason.nvim", -- Companion plugin for lsp-config, allows us to seamlesly install language servers
-	"williamboman/mason-lspconfig.nvim", --> mason-lspconfig bridges mason.nvim with the lspconfig plugin - making it easier to use both plugins together.
+	{
+		"mason-org/mason-lspconfig.nvim", --> mason-lspconfig bridges mason.nvim with the lspconfig plugin - making it easier to use both plugins together.
+		opts = {},
+		dependencies = {
+			{ "mason-org/mason.nvim", opts = {} }, -- Companion plugin for lsp-config, allows us to seamlesly install language servers
+			"neovim/nvim-lspconfig", -- Collection of configurations for built-in LSP client
+		},
+	},
 
 	-- linters
 	"mfussenegger/nvim-lint",
@@ -98,7 +101,7 @@ return require("lazy").setup({
 		version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
 		-- install jsregexp (optional!).
 		build = "make install_jsregexp",
-        dependencies = { "rafamadriz/friendly-snippets" },
+		dependencies = { "rafamadriz/friendly-snippets" },
 	},
 	"onsails/lspkind-nvim", -- vscode-like pictograms for neovim lsp completion items
 
