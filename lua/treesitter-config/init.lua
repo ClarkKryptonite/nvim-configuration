@@ -11,6 +11,7 @@ require("nvim-treesitter").install({
 	"http",
 	"xml",
 	"graphql",
+    "toml"
 })
 -- require("nvim-treesitter.configs").setup({
 -- 	-- A directory to install the parsers into.

@@ -8,6 +8,7 @@ require("mason-lspconfig").setup({
         "kotlin_language_server",
         "jdtls",
         "jsonls",
+        "tombi"
     },
 })
 
