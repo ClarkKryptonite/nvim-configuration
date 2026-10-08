@@ -127,7 +127,10 @@ return require("lazy").setup({
 
 	-- nvim motions on speed
 	{
-		"phaazon/hop.nvim",
-		branch = "v2", -- optional but strongly recommended
+		"smoka7/hop.nvim",
+		version = "*",
+		opts = {
+			keys = "etovxqpdygfblzhckisuran",
+		},
 	},
 })
